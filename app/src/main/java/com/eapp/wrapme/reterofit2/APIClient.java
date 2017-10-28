@@ -1,7 +1,6 @@
 package com.eapp.wrapme.reterofit2;
 
 import okhttp3.OkHttpClient;
-import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -15,7 +14,7 @@ public class APIClient {
 
     static Retrofit getClient() {
 
-        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+       /* HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
 
@@ -23,7 +22,7 @@ public class APIClient {
                 .baseUrl("http://quliver.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
-                .build();
+                .build();*/
 
         return retrofit;
     }
